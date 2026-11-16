@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fiverr Gig Stats Tracker — log daily impressions and clicks per gig, see your best day, compare gigs, and watch the 30-day totals.">
+  <title>Fiverr Gig Stats Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo" aria-hidden="true">TB</div>
+      <div>
+        <h1>Fiverr Gig Stats Tracker</h1>
+        <p class="tagline">Which gig is actually being seen — and are the numbers going up?</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro card">
+      <h2>How it works</h2>
+      <p>My Fiverr gigs were getting impressions, but I had no idea which gig
+        was actually being seen — or whether the numbers were going up or down.
+        This tracker logs daily impressions and clicks, shows the best day,
+        compares the gigs at a glance, and keeps the 30-day totals in view.
+        Your log is saved in your browser, so it is still there tomorrow.</p>
+      <p class="demo-note">Demo example pre-filled below with <strong>sample
+        numbers</strong> from a real Fiverr account (November 2026). Log your
+        own numbers every day — log either per gig or one account total per
+        day, not both, so nothing is counted twice.</p>
+    </section>
+
+    <section class="card">
+      <h2>Last 30 days — account totals</h2>
+      <div class="totals">
+        <div class="total-box"><span class="total-value">69</span><span class="total-label">Impressions</span></div>
+        <div class="total-box"><span class="total-value">1</span><span class="total-label">Click</span></div>
+        <div class="total-box"><span class="total-value">0</span><span class="total-label">Orders</span></div>
+        <div class="total-box"><span class="total-value">PKR 0</span><span class="total-label">Earnings</span></div>
+      </div>
+      <p class="hint">Totals from Fiverr analytics, checked 15 Nov 2026. Update them here when you check again.</p>
+    </section>
+
+    <section class="card">
+      <h2>Your gigs</h2>
+      <div class="results-list" id="gig-list"></div>
+    </section>
+
+    <section class="card">
+      <h2>Best day</h2>
+      <p id="best-day" class="summary"></p>
+      <h2 class="sub-heading">Last 7 logged days</h2>
+      <div class="chart" id="chart"></div>
+    </section>
+
+    <section class="card">
+      <h2>Log today&rsquo;s numbers</h2>
+      <form id="add-form">
+        <div class="form-grid">
+          <div class="field">
+            <label for="new-date">Date</label>
+            <input type="date" id="new-date" required>
+          </div>
+          <div class="field">
+            <label for="new-gig">Gig</label>
+            <select id="new-gig">
+              <option value="all">All gigs (account total)</option>
+              <option value="website">Responsive Website</option>
+              <option value="landing">Landing Page</option>
+              <option value="bugfix">Bug Fix &amp; Maintenance</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="new-impressions">Impressions</label>
+            <input type="number" id="new-impressions" min="0" value="0">
+          </div>
+          <div class="field">
+            <label for="new-clicks">Clicks</label>
+            <input type="number" id="new-clicks" min="0" value="0">
+          </div>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Add to log</button>
+          <button type="button" class="btn btn-secondary" id="reset-demo">Reset to demo example</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="results" class="results" aria-live="polite">
+      <h2>Daily log</h2>
+      <p id="summary" class="summary"></p>
+      <div class="log-list" id="log-list"></div>
+    </section>
+
+    <section class="card">
+      <h2>Gig health checklist</h2>
+      <ul class="checklist">
+        <li><strong>Profile strength 11/12</strong> — only the intro video is missing.</li>
+        <li><strong>Intro video: missing</strong> — record it yourself, video generation is not available here.</li>
+        <li><strong>&ldquo;All buyers can contact me&rdquo;: OFF</strong> — buyers cannot message first while this is off.</li>
+        <li><strong>Orders: 0 yet</strong> — keep logging daily and the first order will show up here.</li>
+      </ul>
+    </section>
+
+    <section class="card disclaimer">
+      <h2>Important note</h2>
+      <p>This is a <strong>demo tracker</strong>. The sample numbers are real
+        account totals, not a promise of orders — never share your Fiverr
+        password, bank detail or payout information in a tracker or a public
+        post. Always check Fiverr itself for the final numbers.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Fiverr Gig Stats Tracker &middot; Built by Tasleem Bibi &middot; Sukkur, Sindh, Pakistan</p>
+      <p class="footer-note">Sample numbers only. Log your own numbers every day.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
